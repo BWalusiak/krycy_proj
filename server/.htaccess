@@ -1,0 +1,9 @@
+Deny from all
+
+RewriteEngine On
+
+RewriteCond %{REMOTE_ADDR} ^172.25.0
+RewriteRule ^$ /external
+
+RewriteCond %{REMOTE_ADDR} ^172.24.14
+RewriteRule ^$ /internal
